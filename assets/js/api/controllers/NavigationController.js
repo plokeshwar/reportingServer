@@ -1,8 +1,8 @@
-angular.module("ExtentX")
-    .controller("NavigationController", ["$scope", "$rootScope", "$http", "$window", function($scope, $rootScope, $http, $window) {
+﻿angular.module("ExtentX")
+    .controller("NavigationController", ["$scope", "$rootScope", "$http", "$window", function ($scope, $rootScope, $http, $window) {
         $scope.states = {};
         $scope.states.activeItem = 'item1';
-        
+
         $scope.items = [{
             id: "item1",
             target: "#/",
@@ -33,9 +33,14 @@ angular.module("ExtentX")
             target: "#/search",
             title: "Search",
             icon: "search"
+        }, {
+            id: "item7",
+            target: "#/report-list",
+            title: "TDD",
+            icon: "star_half"
         }];
 
-        $scope.setTheme = function(theme) {
+        $scope.setTheme = function (theme) {
             var req = {
                 method: 'POST',
                 url: '/setTheme',
@@ -47,10 +52,10 @@ angular.module("ExtentX")
             $http.defaults.headers.post['X-CSRF-Token'] = $rootScope._csrf;
 
             $http(req).
-                success(function(response) {
+                success(function (response) {
                     $window.location.reload();
                 }).
-                error(function(response) {
+                error(function (response) {
                     console.log(response);
                 });
         };

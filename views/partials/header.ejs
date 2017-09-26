@@ -1,6 +1,6 @@
-<div class='navbar navbar-default'>
+<div class='navbar navbar-default' ng-controller="ProjectController" ng-init="loadProjects()">
 
-    <h3 ng-controller="HeaderController" class="pull-left">{{viewName}}</h3>
+    <h3 ng-controller="HeaderController" class="pull-left"><%= req.session.project %> {{viewName}}</h3>
 
     <div class="pull-right">
         <div class="item" uib-dropdown ng-controller="ProjectController" ng-init="loadProjects()">

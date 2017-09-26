@@ -1,4 +1,4 @@
-﻿angular.module("ExtentX")
+angular.module("ExtentX")
     .controller("NavigationController", ["$scope", "$rootScope", "$http", "$window", function ($scope, $rootScope, $http, $window) {
         $scope.states = {};
         $scope.states.activeItem = 'item1';
@@ -35,7 +35,7 @@
             icon: "search"
         }, {
             id: "item7",
-            target: "#/report-list",
+            target: "#/tdd",
             title: "TDD",
             icon: "star_half"
         }];

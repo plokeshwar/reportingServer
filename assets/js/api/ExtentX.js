@@ -15,5 +15,6 @@ angular.module('ExtentX', ['ngRoute', 'ngCookies', 'chart.js', 'ui.bootstrap', '
             when('/exception-summary', { templateUrl: 'partials/exception-summary.html' }).
             when('/exceptions-by-report', { templateUrl: 'partials/exceptions-by-report.html' }).
             when('/search', { templateUrl: 'partials/search.html' }).
+            when('/tdd', { templateUrl: 'partials/tdd.html' }).
             otherwise({ redirectTo: '/' });
     }]);

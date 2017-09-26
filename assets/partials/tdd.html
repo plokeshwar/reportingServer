@@ -1,4 +1,4 @@
-<div class="container main" ng-controller="ReportController" ng-init="getReportList(1);setViewName('Test Case Dashboard');setNodesPanelHeight();">
+<div class="container main" ng-controller="ReportController" ng-init="getReportList(1);setViewName('Dashboard');setNodesPanelHeight();">
     <div analysis-view-config></div>
     
     <div class="row" ng-if="topReportList.length === 0">
@@ -104,7 +104,7 @@
                             <div class="text-lead">
                                 {{ reportTestCounts.featureTodayLength }}
                             </div>
-                            <span class="text-lighter">Features Today</span>
+                            <span class="text-lighter">Test Cases Today</span>
                         </div>
                     </div>
                 </div>
@@ -114,11 +114,11 @@
         <div class='col-md-10'>
             <div class="row">
                 <div class="col-md-6">
-                    <div class="panel panel-default test-trends" id="test-trends-container">
-                        <div class='panel-heading'>
+                    <div class="panel panel-default test-trends" id="test-trends-container" style="width: 1027px;">
+                        <div class='panel-heading' style="padding-left: 356px;">
                             Test Case Trends By Status 
-                            <span class='pull-right pointer' ng-controller='DataPointsController' ng-click='open()' href='#!'>
-                                <i class='material-icons'>more_vert</i>
+                            <span  ng-controller='DataPointsController' ng-click='open()' href='#!'>
+                                <i class='material-icons' style="float: right;">more_vert</i>
                             </span>
                         </div>
                         
@@ -127,7 +127,7 @@
                         </div>
                     </div>
                 </div> <!-- /col -->
-                <div class="col-md-6">
+                <!--<div class="col-md-6">
                     <div class="panel panel-default child-trends" id="child-trends-container">
                         <div class='panel-heading'>
                             Scenario Trends By Status 
@@ -166,7 +166,7 @@
                 </div>
                 
                 <div class='panel-body'>
-                    <ng-include src="'partials/report-template.html'"></ng-include>
+                    <ng-include src="'partials/report-template-tdd.html'"></ng-include>
 
                     <button class="btn btn-default" ng-click="page=page-1;getReportList(page)" ng-if="page>1">
                         Previous

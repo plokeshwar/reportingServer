@@ -21,6 +21,7 @@
 
 module.exports.connections = {
 
+
   /***************************************************************************
   *                                                                          *
   * Local disk storage for DEVELOPMENT ONLY                                  *
@@ -57,14 +58,18 @@ module.exports.connections = {
   *                                                                          *
   ***************************************************************************/
   extent: {
-	  user: 'plokeshwar', // optional
-	 password: 'Pravin1985!', // optional
-    adapter: 'sails-mongo',
-    host: 'ds161584.mlab.com', // host where MongoDB is running
-    port: 61584, // port where MongoDB is running
+	adapter: 'sails-mongo',
+    host: 'ds159254.mlab.com', // host where MongoDB is running
+    port: 59254, // port where MongoDB is running
     database: 'extent'
   },
-
+  
+mlabMongo:{
+  
+ adapter:'sails-mongo',
+ url: 'mongodb://pravin:pravin@ds159254.mlab.com:59254/extent',
+ schema: 'true',
+}
   /***************************************************************************
   *                                                                          *
   * PostgreSQL is another officially supported relational database.          *

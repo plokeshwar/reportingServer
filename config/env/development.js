@@ -17,8 +17,14 @@ module.exports = {
    * environment (see config/connections.js and config/models.js )           *
    ***************************************************************************/
 
-  // models: {
-  //   connection: 'someMongodbServer'
-  // }
+  /*models: {
+  connection: 'ds159254.mlab.com',
+  connect: 'mongodb://plokeshwwar:Pravin1985!@ds159254.mlab.com:59254/extent'
+
+  }*/
+  
+  models: {
+    connect: 'mlabMongo'
+}
 
 };
